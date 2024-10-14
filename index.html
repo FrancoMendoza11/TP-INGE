@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Encuestas de Salud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="header-title">Sistema de Encuestas de Salud</h1>
+  </header>
+  
+  <section id="zonas-centros">
+    <h2>Consultar Zonas y Centros</h2>
+    
+    <!-- Selección de la Zona -->
+    <label for="zona-select">Seleccione una Zona:</label>
+    <select id="zona-select">
+      <option value="zona1">Zona 1</option>
+      <option value="zona2">Zona 2</option>
+      <!-- Agregar más zonas según sea necesario -->
+    </select>
+    
+    <!-- Mapa de la Zona Seleccionada -->
+    <div id="mapa">
+        <h3>Ubicación en el Mapa</h3>
+        <iframe 
+          id="map-frame" 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13143.015685759802!2d-58.709798!3d-34.498486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd1e29a59e1b1%3A0x3f8a109d6cf97a5b!2sLos%20Polvorines%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1696799454780!5m2!1ses!2sar"
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen>
+        </iframe>
+    </div>
+    
+    <!-- Selección de Centro en el Mapa -->
+    <label for="centro-select">Seleccione un Centro:</label>
+    <input type="text" id="centro-select" placeholder="Escriba el nombre del centro o márquelo en el mapa" />
+    
+  </section>
+
+  <section id="registro-encuesta">
+    <h2>Registro de Encuesta</h2>
+    <!-- Formulario de Encuesta -->
+    <form id="form-encuesta">
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" required>
+      
+      <label for="clave">Clave de Ingreso:</label>
+      <input type="password" id="clave" name="clave" required>
+
+      <h3>Preguntas de Evaluación</h3>
+      <!-- Pregunta de ejemplo -->
+      <label for="pregunta1">¿Qué tal fue la organización del centro? (1-10)</label>
+      <input type="number" id="pregunta1" name="pregunta1" min="1" max="10" required>
+      <!-- Repetir para todas las preguntas -->
+
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" rows="4"></textarea>
+      
+      <button type="submit">Enviar Encuesta</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2024 Sistema de Encuestas de Salud - Organismo de Salud</p>
+  </footer>
+</body>
+</html>
