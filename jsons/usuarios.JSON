@@ -15,7 +15,16 @@
         "nombre" : "Joel",
         "apellido": "Quintana",
         "dni" : "32120032",
-        "clave" : "1234"
+        "clave" : "1234",
+        "zonas": [
+            {
+                "zona": "Malvinas Argentinas",
+                "centros": [
+                    "Centro de Salud Los Polvorines",
+                    "Centro de Salud Pablo Nogués"
+                ]
+            }
+        ]
     },
     {
         "id": 3,

@@ -1,0 +1,90 @@
+/* Reseteo de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilo general de la página */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F7FAFC;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* Header con título e icono de usuario */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFFFFE;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    color: #000314;
+    margin-left: 10px;
+  }
+
+  .cont-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icono-usuario {
+      /* padding: 10px 13px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #11aa19;
+      border-radius: 50%;
+      color: #FFFFFE;
+      font-size: 18px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    
+    nav {
+      display: none;
+      opacity: 0;
+    }
+
+    &:hover > nav {
+      display: block;
+      opacity: 1;
+    }
+
+    .seccion {
+      list-style-type: none;
+      margin-top: 10px;
+      text-align: center;
+      cursor: pointer
+    }
+  }
+}
+
+/* Estilo para el contenedor del mapa */
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  /* Deja espacio para la sección de preguntas */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.instrucciones {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  color: #000314;
+}
