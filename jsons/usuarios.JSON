@@ -5,7 +5,9 @@
         "nombre" : "Lucas",
         "apellido": "Quintana",
         "dni" : "12120032",
-        "clave" : "123"
+        "clave" : "123",
+        "centroAtencion" : "Centro de Salud Los Polvorines",
+        "completoEncuesta" : false
     },
     {
         "id": 2,
@@ -14,7 +16,6 @@
         "apellido": "Quintana",
         "dni" : "32120032",
         "clave" : "1234"
-
     },
     {
         "id": 3,

@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                 "nombre" : "Lucas",
                 "apellido": "Quintana",
                 "dni" : "12120032",
-                "clave" : "123"
+                "clave" : "123",
+                "centroAtencion" : "Centro de Salud Los Polvorines",
+                "completoEncuesta" : false
             },
             {
                 "id": 2,
@@ -36,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                 "apellido": "Quintana",
                 "dni" : "32120032",
                 "clave" : "1234"
-        
             },
             {
                 "id": 3,
@@ -63,16 +64,24 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
         usuarios.forEach(usuario => { //Para cada valor del arreglo usuario, ejecuto la siguiente funcion, que compara los datos y en caso de encontrar almacena el usuario en la variable usuario encontrado.
             if (usuario.dni === dni && usuario.clave === clave) {
                 usuarioEncontrado = usuario; // Guardar usuario si coincide
+                console.log(usuarioEncontrado);
             }
         });
 
         // Si el usuario fue encontrado, llevar a la vista que le corresponda (dependiendo de si es paciente, coordinador o personal de secretaria)
-
+   
         if (usuarioEncontrado) { 
+
+            //Almaceno en LocalStorage el centro de atencion del usuario.
+
+            localStorage.setItem("centroAtencion", usuarioEncontrado.centroAtencion);
+            localStorage.setItem("estadoEncuesta", usuarioEncontrado.completoEncuesta);
+            localStorage.setItem("rol", usuarioEncontrado.rol);
+
             // Redirigir según el rol del usuario
             switch (usuarioEncontrado.rol) { 
                 case 'cliente':
-                    window.location.href = 'pagina_cliente.html'; // cAMBIAR A LA URL QUE CORRESPONDA
+                    window.location.href = 'index.html'; // cAMBIAR A LA URL QUE CORRESPONDA
                     break;
                 case 'coordinador':
                     window.location.href = 'pagina_coordinador.html'; // cAMBIAR A LA URL QUE CORRESPONDA

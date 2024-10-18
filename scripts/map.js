@@ -7,6 +7,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+//Traigo los datos del usuario del localstorage
+const centroAtencion = localStorage.getItem("centroAtencion");
+const rol = localStorage.getItem("rol");
+const completoEncuesta = localStorage.getItem("estadoEncuesta");
+
+console.log(completoEncuesta);
+console.log(rol);
+console.log(centroAtencion);
+
 // Centros de salud cercanos con preguntas específicas
 var centros = [
   {
@@ -64,7 +73,16 @@ centros.forEach(function(centro) {
   var marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
   
   marker.on('click', function() {
-    mostrarPreguntas(centro.preguntas);
+    console.log(rol=="cliente");
+    console.log(completoEncuesta == false);
+    if(centroAtencion == centro.nombre && completoEncuesta == "false" && rol == "cliente"){
+      mostrarPreguntas(centro.preguntas);
+    }else if (completoEncuesta == "true"){
+      alert("Ya completo la encuesta.");
+    }else {
+      alert("No se atendio en este centro de salud");
+    }
+    
   });
 });
 
