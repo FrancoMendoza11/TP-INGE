@@ -16,14 +16,8 @@
         "apellido": "Quintana",
         "dni" : "32120032",
         "clave" : "1234",
-        "zonas": [
-            {
-                "zona": "Malvinas Argentinas",
-                "centros": [
-                    "Centro de Salud Los Polvorines",
-                    "Centro de Salud Pablo Nogués"
-                ]
-            }
+        "zonasAsignadas": [ 
+            "Malvinas Argentinas"
         ]
     },
     {
@@ -32,7 +26,10 @@
         "nombre" : "Bruno",
         "apellido": "Mars",
         "dni" : "52120232",
-        "clave" : "12345"
+        "clave" : "12345",
+        "zonas": [
+            "Malvinas Argentinas"
+        ]
     }
 ]
 }

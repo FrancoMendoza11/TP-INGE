@@ -1,0 +1,66 @@
+{
+  "zonas": [
+    {
+      "zona": "Malvinas Argentinas",
+      "centros": [
+        {
+          "nombre": "Centro de Salud Los Polvorines",
+          "coords": [
+            -34.5226,
+            -58.7006
+          ],
+          "preguntas": [
+            "¿Cómo calificaría el tiempo de espera?",
+            "¿Está satisfecho con la atención recibida?",
+            "¿El personal fue amable?",
+            "¿Recibió la atención que esperaba?",
+            "¿El lugar estaba limpio?",
+            "¿Se sintió cómodo durante la consulta?",
+            "¿La explicación fue clara?",
+            "¿El trato fue respetuoso?",
+            "¿El personal fue profesional?",
+            "¿Recomendaría el centro?"
+          ]
+        },
+        {
+          "nombre": "Centro de Salud Tortuguitas",
+          "coords": [
+            -34.527,
+            -58.705
+          ],
+          "preguntas": [
+            "¿El personal fue amable?",
+            "¿Recibió la atención que esperaba?",
+            "¿El lugar estaba limpio?",
+            "¿Se sintió cómodo durante la consulta?",
+            "¿El tiempo de espera fue adecuado?",
+            "¿La información fue clara?",
+            "¿La atención fue profesional?",
+            "¿Hubo una solución a su problema?",
+            "¿Se sintió seguro?",
+            "¿Recomendaría el centro?"
+          ]
+        },
+        {
+          "nombre": "Centro de Salud Pablo Nogués",
+          "coords": [
+            -34.516,
+            -58.694
+          ],
+          "preguntas": [
+            "¿El lugar estaba limpio?",
+            "¿Se sintió cómodo durante la consulta?",
+            "¿La atención fue oportuna?",
+            "¿Recibió información clara?",
+            "¿El trato fue cortés?",
+            "¿El personal fue profesional?",
+            "¿Hubo seguimiento adecuado?",
+            "¿Se sintió escuchado?",
+            "¿Le brindaron opciones de tratamiento?",
+            "¿Recomendaría el centro?"
+          ]
+        }
+      ]
+    }
+  ]
+}

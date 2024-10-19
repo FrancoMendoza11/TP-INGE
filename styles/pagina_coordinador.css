@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Estilo general de la página */
 body {
   font-family: 'Roboto', sans-serif;
@@ -13,6 +14,7 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
+
 /* Header con título e icono de usuario */
 header {
   display: flex;
@@ -46,15 +48,16 @@ header {
       margin-right: 10px;
       cursor: pointer;
     }
-    
+
     nav {
       display: none;
       opacity: 0;
+      transition: opacity .3s ease, display .3s ease-in-out allow-discrete;
     }
 
-    &:hover > nav {
-      display: block;
+    &:hover>nav {
       opacity: 1;
+      display: block;
     }
 
     .seccion {

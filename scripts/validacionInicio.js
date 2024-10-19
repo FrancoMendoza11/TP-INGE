@@ -23,29 +23,32 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
         usuarios = [
             {
                 "id": 1,
-                "rol" : "cliente",
-                "nombre" : "Lucas",
+                "rol": "cliente",
+                "nombre": "Lucas",
                 "apellido": "Quintana",
-                "dni" : "12120032",
-                "clave" : "123",
-                "centroAtencion" : "Centro de Salud Los Polvorines",
-                "completoEncuesta" : false
+                "dni": "12120032",
+                "clave": "123",
+                "centroAtencion": "Centro de Salud Los Polvorines",
+                "completoEncuesta": false
             },
             {
                 "id": 2,
-                "rol" : "coordinador",
-                "nombre" : "Joel",
+                "rol": "coordinador",
+                "nombre": "Joel",
                 "apellido": "Quintana",
-                "dni" : "32120032",
-                "clave" : "1234"
+                "dni": "32120032",
+                "clave": "1234",
+                "zonasAsignadas": [
+                    "Malvinas Argentinas"
+                ]
             },
             {
                 "id": 3,
-                "rol" : "personal secretaria",
-                "nombre" : "Bruno",
+                "rol": "personal secretaria",
+                "nombre": "Bruno",
                 "apellido": "Mars",
-                "dni" : "52120232",
-                "clave" : "12345"
+                "dni": "52120232",
+                "clave": "12345"
             }
         ];
         });
@@ -72,18 +75,25 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
    
         if (usuarioEncontrado) { 
 
-            //Almaceno en LocalStorage el centro de atencion del usuario.
+            // //Almaceno en LocalStorage el centro de atencion del usuario.
 
-            localStorage.setItem("centroAtencion", usuarioEncontrado.centroAtencion);
-            localStorage.setItem("estadoEncuesta", usuarioEncontrado.completoEncuesta);
-            localStorage.setItem("rol", usuarioEncontrado.rol);
+            // localStorage.setItem("centroAtencion", usuarioEncontrado.centroAtencion);
+            // localStorage.setItem("estadoEncuesta", usuarioEncontrado.completoEncuesta);
+            // localStorage.setItem("rol", usuarioEncontrado.rol);
 
             // Redirigir según el rol del usuario
             switch (usuarioEncontrado.rol) { 
                 case 'cliente':
+                    localStorage.setItem("centroAtencion", usuarioEncontrado.centroAtencion);
+                    localStorage.setItem("estadoEncuesta", usuarioEncontrado.completoEncuesta);
+                    localStorage.setItem("rol", usuarioEncontrado.rol);
+
                     window.location.href = 'index.html'; // cAMBIAR A LA URL QUE CORRESPONDA
                     break;
                 case 'coordinador':
+                    localStorage.setItem("rol", usuarioEncontrado.rol);
+                    localStorage.setItem("zonasAsignadas", usuarioEncontrado.zonasAsignadas);
+
                     window.location.href = 'pagina_coordinador.html'; // cAMBIAR A LA URL QUE CORRESPONDA
                     break;
                 case 'personal secretaria':
