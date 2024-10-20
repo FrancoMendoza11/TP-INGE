@@ -55,12 +55,24 @@ zonas.forEach(zona => {
     let marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
 
     marker.on('click', function () {
+
+      /* ACOMODAR CUANDO ESTEN LAS ZONAS ASIGNADAS */
       // Valida que el centro esté en la zona asignada al coordinador
-      if (zona.nombre !== zonasAsignadas) {
+     /* if (zona.nombre !== zonasAsignadas) {
         alert("Centro de salud perteneciente a una zona no asignada.");
-      }
+      }*/
       // Carga el modal con los datos
-      
+      if(centro.nombre=="Centro de Salud Los Polvorines"){
+        contenedorModal.classList.remove("ocultar");
+        contenedorModal.classList.add("mostrar");
+      }
     });
   });
+})
+
+let botonSalir = document.querySelector(".btn-salir");
+let contenedorModal = document.querySelector(".cont-modal")
+
+botonSalir.addEventListener("click", ()=>{
+  contenedorModal.classList.add("ocultar");
 })
