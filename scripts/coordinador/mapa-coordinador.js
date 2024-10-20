@@ -55,9 +55,12 @@ zonas.forEach(zona => {
     let marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
 
     marker.on('click', function () {
+      // Valida que el centro esté en la zona asignada al coordinador
       if (zona.nombre !== zonasAsignadas) {
         alert("Centro de salud perteneciente a una zona no asignada.");
       }
+      // Carga el modal con los datos
+      
     });
   });
 })
