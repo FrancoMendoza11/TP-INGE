@@ -237,6 +237,54 @@ header {
   transition:.2s;
   background-color:rgb(250, 135, 3);
 }
+
+.boxEncuesta {
+  z-index:10;
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px;
+  background-color: #FFFFFE;
+  gap:10px;
+}
+
+.contenedorPreguntas {
+  display:flex;
+  width:500px;
+  flex-direction: column;
+  padding: 2em;
+
+  gap:10px;
+}
+
+.contenedorPreguntas p {
+  left:5px;
+}
+
+.contenedorPreguntas small {
+  left:5px;
+  font-weight: bold;
+  background-color:rgb(167, 167, 190);
+  padding:0px 7px;
+  border-radius:3px;
+}
+
+.contenedorPreguntas h1 {
+  text-align:center;
+  padding:15px;
+}
+.btn-x {
+  position: absolute;
+  right:5%;
+  top: 5%;
+  width:20px;
+  height:20px;
+  cursor: pointer;
+}
+
 .mostrar {
   display:flex;
 }

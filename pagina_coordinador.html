@@ -78,22 +78,25 @@
     <div class="cont-encuesta">
       <div class="encuesta">
         <p>Encuesta 1</p>
-        <button class="btn-ver">Ver</button>
+        <button class="btn-ver" data-id-encuesta="1">Ver</button>
       </div>
       <div class="encuesta">
         <p>Encuesta 2</p>
-        <button class="btn-ver">Ver</button>
+        <button class="btn-ver" data-id-encuesta="2">Ver</button>
       </div>
       <div class="encuesta">
         <p>Encuesta 3</p>
-        <button class="btn-ver">Ver</button>
+        <button class="btn-ver" data-id-encuesta="3">Ver</button>
       </div>
 
     </div>
     <button class="btn-volver">Volver</button>
   </div>
  </div> 
-
+  <div class="boxEncuesta">
+    <div class="contenedorPreguntas"></div>
+    <button class="btn-x">x</button>
+  </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="./scripts/coordinador/mapa-coordinador.js"></script>
   <script src="./scripts/fin-sesion.js"></script>
