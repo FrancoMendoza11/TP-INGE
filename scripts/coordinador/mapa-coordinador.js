@@ -1,3 +1,4 @@
+
 const modal = document.querySelector(".modal");
 
 // Inicializa el mapa centrado en la Universidad Nacional de General Sarmiento
@@ -75,4 +76,20 @@ let contenedorModal = document.querySelector(".cont-modal")
 
 botonSalir.addEventListener("click", ()=>{
   contenedorModal.classList.add("ocultar");
+})
+
+// Encuestas
+
+let botonVerEncuestas = document.querySelector(".btn-verEncuestas");
+let contenedorModalEncuestas = document.querySelector(".cont-modal-encuestas");
+let botonVolver = document.querySelector(".btn-volver");
+
+botonVerEncuestas.addEventListener("click",()=>{
+  contenedorModal.classList.remove("mostrar");
+  contenedorModalEncuestas.classList.add("mostrar");
+})
+
+botonVolver.addEventListener("click",()=>{
+  contenedorModal.classList.add("mostrar");
+  contenedorModalEncuestas.classList.remove("mostrar");
 })
