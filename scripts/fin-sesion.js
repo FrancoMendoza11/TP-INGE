@@ -1,5 +1,5 @@
 const finSesion = document.querySelector('#fin-sesion');
 
 finSesion.addEventListener('click', () => {
-  window.location.href = "/inicioUsuario.html"
+  window.location.href = "/index.html"
 })

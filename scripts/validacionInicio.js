@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                     localStorage.setItem("estadoEncuesta", usuarioEncontrado.completoEncuesta);
                     localStorage.setItem("rol", usuarioEncontrado.rol);
 
-                    window.location.href = 'index.html'; // cAMBIAR A LA URL QUE CORRESPONDA
+                    window.location.href = 'página_paciente.html'; // cAMBIAR A LA URL QUE CORRESPONDA
                     break;
                 case 'coordinador':
                     localStorage.setItem("rol", usuarioEncontrado.rol);

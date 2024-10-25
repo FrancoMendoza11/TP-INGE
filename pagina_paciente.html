@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Encuestas de Salud</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+  <header>
+    <h2>Sistema de Encuestas de Salud</h2>
+    <div class="icono-usuario">U</div>
+  </header>
+  <p class="instrucciones">Seleccione el centro de salud donde se atendió y complete la encuesta</p>
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+  <div class="preguntas-container" id="preguntasContainer">
+    <!-- Preguntas se generarán aquí -->
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="./scripts/paciente/map.js"></script>
+</body>
+</html>
