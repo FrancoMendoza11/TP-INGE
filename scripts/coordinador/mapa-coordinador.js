@@ -26,6 +26,19 @@ let encuestasHardcodeadas = [{
     "¿El personal fue profesional?" : 8,
     "¿Recomendaría el centro?" : 4
     },
+    {
+      encuestaNumero : 3,
+    "¿Cómo calificaría el tiempo de espera?" : 1,
+    "¿Está satisfecho con la atención recibida?" : 5,
+    "¿El personal fue amable?" : 2,
+    "¿Recibió la atención que esperaba?" : 2,
+    "¿El lugar estaba limpio?" : 1,
+    "¿Se sintió cómodo durante la consulta?" : 5,
+    "¿La explicación fue clara?" : 6,
+    "¿El trato fue respetuoso?" : 10,
+    "¿El personal fue profesional?" : 8,
+    "¿Recomendaría el centro?" : 2
+    },
 ];
 
 // Inicializa el mapa centrado en la Universidad Nacional de General Sarmiento
