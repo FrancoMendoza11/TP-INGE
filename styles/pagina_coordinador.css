@@ -284,7 +284,31 @@ header {
   height:20px;
   cursor: pointer;
 }
+canvas {
+  max-width: 600px;
+  max-height: 600px;
+}
+.contenedor-reportes {
+  display: none;
+  position:absolute;
+  z-index:30;
+  top:50%;
+  transform:translateY(-50%);
+  left:1%;
+  background-color: #FFFFFE;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px;
+  width: 600px;
+  height: 650px;
+}
 
+.contenedor-reportes button {
+  position:absolute;
+  right: 1%;
+  top: 1%;
+  padding: 0px 5px;
+  cursor: pointer;
+}
 .mostrar {
   display:flex;
 }

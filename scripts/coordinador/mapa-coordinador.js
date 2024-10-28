@@ -178,4 +178,75 @@ botonVer.forEach( (boton) => {
 }
 );
 
-  
+function calcularPromedios(encuestas) {
+  const totalRespuestas = {};
+  const cantidadEncuestas = encuestas.length;
+
+  encuestas.forEach(encuesta => {
+      for (let pregunta in encuesta) {
+          if (pregunta !== 'encuestaNumero') {
+              totalRespuestas[pregunta] = (totalRespuestas[pregunta] || 0) + encuesta[pregunta];
+          }
+      }
+  });
+
+  for (let pregunta in totalRespuestas) {
+      totalRespuestas[pregunta] = totalRespuestas[pregunta] / cantidadEncuestas;
+  }
+
+  return totalRespuestas;
+}
+
+
+const promedios = calcularPromedios(encuestasHardcodeadas);
+
+const ctx = document.getElementById('myPieChart').getContext('2d');
+const myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+      labels: Object.keys(promedios),
+      datasets: [{
+          label: 'Calificaciones Promedio',
+          data: Object.values(promedios),
+          backgroundColor: [
+              '#FF6384',
+              '#36A2EB',
+              '#FFCE56',
+              '#4BC0C0',
+              '#9966FF',
+              '#FF9F40',
+              '#FF6384',
+              '#36A2EB',
+              '#FFCE56',
+              '#4BC0C0'
+          ],
+          hoverOffset: 4
+      }]
+  },
+  options: {
+      responsive: true,
+      plugins: {
+          legend: {
+              position: 'top',
+          },
+          title: {
+              display: true,
+              text: 'Calificaciones Promedio de Encuestas'
+          }
+      }
+  }
+});
+
+const botonXReportes = document.getElementById("botonX-reportes");
+const reportes = document.querySelector(".reportes");
+
+const contenedorReportes = document.querySelector(".contenedor-reportes");
+
+
+reportes.addEventListener("click",()=>{
+  contenedorReportes.classList.remove("ocultar");
+  contenedorReportes.classList.add("mostrar");
+});
+botonXReportes.addEventListener("click",()=>{
+  contenedorReportes.classList.add("ocultar");
+});
