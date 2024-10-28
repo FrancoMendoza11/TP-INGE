@@ -1,4 +1,5 @@
 const modal = document.querySelector(".modal");
+const modalInstrucciones = document.querySelector(".modal-instrucciones");
 
 let encuestasHardcodeadas = [{
   encuestaNumero : 1,
@@ -103,6 +104,8 @@ zonas.forEach(zona => {
         alert("Centro de salud perteneciente a una zona no asignada.");
       }*/
       // Carga el modal con los datos
+
+      modalInstrucciones.innerHTML = `<p>2. Presione el boton "Ver Encuestas" para consultar las encuestas completadas.</p>`
       if(centro.nombre=="Centro de Salud Los Polvorines"){
         contenedorModal.classList.remove("ocultar");
         contenedorModal.classList.add("mostrar");
@@ -131,6 +134,7 @@ const contenedorPreguntas = document.querySelector(".contenedorPreguntas");
 console.log(numeroEncuestaIngresada);
 
 botonVerEncuestas.addEventListener("click",()=>{
+   modalInstrucciones.innerHTML = `3. Si quiere ver las respuestas de una encuesta en particular, presione en "Ver".`
   contenedorModal.classList.remove("mostrar");
   contenedorModalEncuestas.classList.add("mostrar");
 })
@@ -143,6 +147,7 @@ botonVolver.addEventListener("click",()=>{
 botonVer.forEach( (boton) => {
   boton.addEventListener("click",(event)=>{
 
+  modalInstrucciones.classList.add('ocultar');
   numeroEncuestaIngresada = event.currentTarget.dataset.idEncuesta;
   let contador = 0;
   

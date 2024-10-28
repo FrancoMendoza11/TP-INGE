@@ -6,6 +6,7 @@
   <title>Mapa de Encuestas de Salud</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="./styles/pagina_coordinador.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -21,46 +22,48 @@
       </nav> 
     </div>
   </header>
-
-  <p class="instrucciones">Seleccione la zona asignada, el centro de salud y consulte las encuestas completadas.</p>
-
   <div class="map-container">
     <div id="map">
      
     </div>
   </div> 
+  
+  <div class="modal-instrucciones">
+    <p>Instrucciones:</p>
+    <p>1. Seleccione el marcador del centro de salud asignado.</p>
+  </div>
 
 <div class="cont-modal">
   <div class="modal">
     <h3>Lista de pacientes atendidos en el centro.</h3>
     <div class="cont-pacientes">
       <div class="paciente">
-        <p>Nombre Apellido</p>
-        <p>DNI: 123456487</p>
+        <p>Nombre y Apellido: Bruno Mars</p>
+        <p>DNI: 2056487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
       <div class="paciente">
-        <p>Nombre Apellido</p>
-        <p>DNI: 123456487</p>
+        <p>Nombre y Apellido: Phil Collins</p>
+        <p>DNI: 132456487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
       <div class="paciente">
-        <p>Nombre Apellido</p>
-        <p>DNI: 123456487</p>
+        <p>Nombre y Apellido: Frank Sinatra</p>
+        <p>DNI: 3453216487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
       <div class="paciente">
-        <p>Nombre Apellido</p>
-        <p>DNI: 123456487</p>
+        <p>Nombre y Apellido: Michael Jackson</p>
+        <p>DNI: 2923456487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
       <div class="paciente">
-        <p>Nombre Apellido</p>
-        <p>DNI: 123456487</p>
+        <p>Nombre y Apellido: Jacob Collier</p>
+        <p>DNI: 423456487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
       <div class="paciente">
-        <p>Nombre Apellido</p>
+        <p>Nombre y Apellido: Axl Rose</p>
         <p>DNI: 123456487</p>
         <p>Estado de encuesta: Completada</p>
       </div>
@@ -103,7 +106,7 @@
   </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="./scripts/coordinador/mapa-coordinador.js"></script>
   <script src="./scripts/fin-sesion.js"></script>

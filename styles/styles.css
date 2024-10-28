@@ -23,6 +23,8 @@ header {
   padding: 20px;
   background-color: #FFFFFE;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin:15px;
 }
 
 header h2 {
@@ -52,7 +54,13 @@ header .icono-usuario {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 98%;
+  margin:auto;
+  height: 500px;
+  margin-bottom: 50px;
+  z-index:1;
+  border-radius:15px;
+  overflow: hidden;
   height: 60vh; /* Deja espacio para la sección de preguntas */
 }
 
