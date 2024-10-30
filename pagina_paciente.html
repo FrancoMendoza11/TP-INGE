@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa de Encuestas de Salud</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/pagina_paciente.css" />
 </head>
 <body>
   <header>
     <h2>Sistema de Encuestas de Salud</h2>
-    <div class="icono-usuario">U</div>
+    <div class="cont-usuario">
+      <div class="icono-usuario">U</div>
+	      <nav>
+		      <ul>
+            <li class="seccion" id="fin-sesion"><a href="index.html">Cerrar sesión</a></li>
+          </ul>
+	      </nav>
+      </div>
   </header>
   <p class="instrucciones">Seleccione el centro de salud donde se atendió y complete la encuesta</p>
   <div class="map-container">
     <div id="map"></div>
   </div>
   <div class="preguntas-container" id="preguntasContainer">
-    <!-- Preguntas se generarán aquí -->
   </div>
+  <script src="./scripts/sesion/fin-sesion.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="./scripts/paciente/map.js"></script>
+  <script src="./scripts/paciente/scriptPaciente.js"></script>
 </body>
 </html>

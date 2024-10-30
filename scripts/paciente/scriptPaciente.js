@@ -8,13 +8,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 //Traigo los datos del usuario del localstorage
-const centroAtencion = localStorage.getItem("centroAtencion");
-const rol = localStorage.getItem("rol");
-const completoEncuesta = localStorage.getItem("estadoEncuesta");
-
-console.log(completoEncuesta);
-console.log(rol);
-console.log(centroAtencion);
+let centroAtencion = localStorage.getItem("centroAtencion");
+let rol = localStorage.getItem("rol");
+let completoEncuesta = localStorage.getItem("estadoEncuesta");
 
 // Centros de salud cercanos con preguntas específicas
 var centros = [
@@ -73,8 +69,7 @@ centros.forEach(function(centro) {
   var marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
   
   marker.on('click', function() {
-    console.log(rol=="cliente");
-    console.log(completoEncuesta == false);
+
     if(centroAtencion == centro.nombre && completoEncuesta == "false" && rol == "cliente"){
       mostrarPreguntas(centro.preguntas);
     }else if (completoEncuesta == "true"){
@@ -88,8 +83,11 @@ centros.forEach(function(centro) {
 
 // Función para mostrar preguntas con opciones de puntuación
 function mostrarPreguntas(preguntas) {
+    
     var preguntasContainer = document.getElementById('preguntasContainer');
     preguntasContainer.innerHTML = '';
+
+    preguntasContainer.classList.add("mostrar");
   
     preguntas.forEach(function(pregunta, index) {
       var preguntaElem = document.createElement('div');
@@ -125,11 +123,13 @@ function mostrarPreguntas(preguntas) {
     enviarBtn.className = 'boton-enviar';
     enviarBtn.textContent = 'Enviar';
     enviarBtn.onclick = function() {
+      localStorage.setItem("estadoEncuesta", "true");
+      completoEncuesta = localStorage.getItem("estadoEncuesta");
       alert('Encuesta enviada. ¡Gracias por su tiempo!');
+      preguntasContainer.classList.remove("mostrar");
     };
     
     preguntasContainer.appendChild(enviarBtn);
-    preguntasContainer.style.display = 'block';
   }
   
 

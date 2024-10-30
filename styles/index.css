@@ -77,3 +77,13 @@ body {
     color: #888; /* Color del icono */
 }
 
+nav {
+      display: none;
+      opacity: 0;
+      transition: opacity .3s ease, display .3s ease-in-out allow-discrete;
+    }
+
+    &:hover>nav {
+      opacity: 1;
+      display: block;
+    }

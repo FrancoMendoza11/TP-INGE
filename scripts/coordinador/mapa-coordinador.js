@@ -55,9 +55,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const rol = localStorage.getItem("rol");
 const zonasAsignadas = localStorage.getItem("zonasAsignadas");
 
-console.log(rol);
-console.log(zonasAsignadas);
-
 // Centros de salud cercanos con preguntas específicas
 let zonas = [
   {
@@ -97,13 +94,6 @@ zonas.forEach(zona => {
     let marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
 
     marker.on('click', function () {
-
-      /* ACOMODAR CUANDO ESTEN LAS ZONAS ASIGNADAS */
-      // Valida que el centro esté en la zona asignada al coordinador
-     /* if (zona.nombre !== zonasAsignadas) {
-        alert("Centro de salud perteneciente a una zona no asignada.");
-      }*/
-      // Carga el modal con los datos
 
       modalInstrucciones.innerHTML = `<p>2. Presione el boton "Ver Encuestas" para consultar las encuestas completadas.</p>`
       if(centro.nombre=="Centro de Salud Los Polvorines"){
