@@ -1,0 +1,7 @@
+Para probar la pantalla de usuario:
+	dni:12120032
+	clave:123
+
+Para probar la pantalla del coordinador:
+	dni:32120032
+	clave:1234

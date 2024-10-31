@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
             {
                 "id": 1,
                 "rol": "cliente",
-                "nombre": "Lucas",
-                "apellido": "Quintana",
+                "nombre": "Charly",
+                "apellido": "Garcia",
                 "dni": "12120032",
                 "clave": "123",
                 "centroAtencion": "Centro de Salud Los Polvorines",
@@ -14,21 +14,13 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
             {
                 "id": 2,
                 "rol": "coordinador",
-                "nombre": "Joel",
-                "apellido": "Quintana",
+                "nombre": "Carlos",
+                "apellido": "Gardel",
                 "dni": "32120032",
                 "clave": "1234",
                 "zonasAsignadas": [
                     "Malvinas Argentinas"
                 ]
-            },
-            {
-                "id": 3,
-                "rol": "personal secretaria",
-                "nombre": "Bruno",
-                "apellido": "Mars",
-                "dni": "52120232",
-                "clave": "12345"
             }
         ];
 
@@ -68,9 +60,6 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                     localStorage.setItem("zonasAsignadas", usuarioEncontrado.zonasAsignadas);
 
                     window.location.href = 'pagina_coordinador.html'; 
-                    break;
-                case 'personal secretaria':
-                    window.location.href = 'pagina_secretaria.html';
                     break;
                 default:
                     alert('Rol no reconocido');
