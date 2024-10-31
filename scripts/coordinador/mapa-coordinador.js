@@ -53,8 +53,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Traigo los datos del usuario del localstorage
 const rol = localStorage.getItem("rol");
-const zonasAsignadas = localStorage.getItem("zonasAsignadas");
-
+const zonasAsignadas = JSON.parse(localStorage.getItem("zonasAsignadas"));
+console.log(zonasAsignadas);
 // Centros de salud cercanos con preguntas específicas
 let zonas = [
   {
@@ -96,10 +96,17 @@ zonas.forEach(zona => {
     marker.on('click', function () {
 
       modalInstrucciones.innerHTML = `<p>2. Presione el boton "Ver Encuestas" para consultar las encuestas completadas.</p>`
-      if(centro.nombre=="Centro de Salud Los Polvorines"){
-        contenedorModal.classList.remove("ocultar");
-        contenedorModal.classList.add("mostrar");
+      for(zona of zonasAsignadas){
+        console.log(zona);
+        console.log(typeof zona);
+        console.log(centro.nombre);
+        if(centro.nombre==zona){
+          
+          contenedorModal.classList.remove("ocultar");
+          contenedorModal.classList.add("mostrar");
+        }
       }
+
     });
   });
 })

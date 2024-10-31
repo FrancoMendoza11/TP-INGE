@@ -18,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                 "apellido": "Gardel",
                 "dni": "32120032",
                 "clave": "1234",
-                "zonasAsignadas": [
-                    "Malvinas Argentinas"
-                ]
+                "zonasAsignadas": ["Centro de Salud Los Polvorines","Centro de Salud Pablo Nogués"]
             }
         ];
 
@@ -57,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
                     break;
                 case 'coordinador':
                     localStorage.setItem("rol", usuarioEncontrado.rol);
-                    localStorage.setItem("zonasAsignadas", usuarioEncontrado.zonasAsignadas);
+                    localStorage.setItem("zonasAsignadas", JSON.stringify(usuarioEncontrado.zonasAsignadas));
 
                     window.location.href = 'pagina_coordinador.html'; 
                     break;
