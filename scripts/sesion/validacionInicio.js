@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() { // Es un evento que s
         usuarios.forEach(usuario => { //Para cada valor del arreglo usuario, ejecuto la siguiente funcion, que compara los datos y en caso de encontrar almacena el usuario en la variable usuario encontrado.
             if (usuario.dni === dni && usuario.clave === clave) {
                 usuarioEncontrado = usuario; // Guardar usuario si coincide
-                console.log(usuarioEncontrado);
             }
         });
 

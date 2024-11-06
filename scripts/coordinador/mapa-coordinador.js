@@ -54,7 +54,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //Traigo los datos del usuario del localstorage
 const rol = localStorage.getItem("rol");
 const zonasAsignadas = JSON.parse(localStorage.getItem("zonasAsignadas"));
-console.log(zonasAsignadas);
 // Centros de salud cercanos con preguntas específicas
 let zonas = [
   {
@@ -86,10 +85,8 @@ let zonas = [
 
 // Crea marcadores y añade eventos de clic para cada centro
 zonas.forEach(zona => {
-  console.log(zona.nombre);
   
   zona.centros.forEach(centro => {
-    console.log(centro.nombre);
     
     let marker = L.marker(centro.coords).addTo(map).bindPopup(centro.nombre);
 
@@ -97,9 +94,6 @@ zonas.forEach(zona => {
 
       modalInstrucciones.innerHTML = `<p>2. Presione el boton "Ver Encuestas" para consultar las encuestas completadas.</p>`
       for(zona of zonasAsignadas){
-        console.log(zona);
-        console.log(typeof zona);
-        console.log(centro.nombre);
         if(centro.nombre==zona){
           
           contenedorModal.classList.remove("ocultar");
@@ -127,8 +121,6 @@ let botonVer = document.querySelectorAll(".btn-ver");
 let numeroEncuestaIngresada = 0;
 const divEncuesta = document.querySelector(".boxEncuesta");
 const contenedorPreguntas = document.querySelector(".contenedorPreguntas");
-
-console.log(numeroEncuestaIngresada);
 
 botonVerEncuestas.addEventListener("click",()=>{
    modalInstrucciones.innerHTML = `3. Si quiere ver las respuestas de una encuesta en particular, presione en "Ver".`
@@ -171,7 +163,6 @@ botonVer.forEach( (boton) => {
   
   const botonX= document.querySelector(".btn-x");
   botonX.addEventListener("click",()=>{
-    console.log("hola");
     divEncuesta.classList.remove("mostrar");
     divEncuesta.classList.add("ocultar");
   }
